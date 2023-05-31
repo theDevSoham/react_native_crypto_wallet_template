@@ -27,6 +27,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {createWallet} from './check/ethereum';
+import {testing} from './check/bitcoin';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -59,6 +60,7 @@ const Section: React.FC<
 };
 
 createWallet().then(console.log);
+testing();
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
